@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css?family=Quantico:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <title>RAF Beograd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+            overflow-x: auto;
+            padding: 0px;
+            background: white;
+            border: 0;
+        }
+
+        h2::selection {
+            background-color: white;
+            color: #25274E;
+        }
+		.btn-primary{
+		background-color:#AC3535;
+		font-family:Quantico;
+		display: flex;
+		border:0;
+		}
+		.btn-primary:hover{
+		background-color:#25274E;
+		border:0;
+		}
+		
+        #title hr {
+            height: 8px;
+            border: 0;
+            background-color: #25274E;
+            margin: 0;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background: #25274E;
+            height: 46px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imesmera {
+            line-height: 29px;
+            margin-top: -10px;
+            font-size: 2em;
+            color: black;
+            font-family: Quantico;
+            font-weight: 600;
+        }
+
+        #logo {
+            height: 98%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+			margin-top:-2px;
+			margin-right:-6px;
+            user-select: none;
+
+        }
+
+        input {
+            margin: -3px 14px 0 0px;
+            border: 0;
+            font-family: Roboto;
+			letter-spacing:0.8px;
+            font-size: 16px;
+            border-radius: 26px;
+            padding-left: 13px;
+            height: 30px;
+            width: 370px;
+        }
+
+        #sb {
+            position: relative;
+            height: 18px;
+            top: -2px;
+            left: 362px;
+        }
+
+        input:focus {
+            outline-width: 0;
+        }
+
+        .smer p {
+            font-family: Roboto;
+            font-size: 19px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+
+        .smer1 p {
+            font-family: Roboto;
+            font-size: 19px;
+            line-height: 20px;
+            font-weight: 300;
+        }
+
+        #li h3 {
+            font-family: Quantico;
+        }
+
+        #li {
+            font-family: Roboto;
+            font-size: 18px;
+        }
+
+        .smer img {
+            width: 112.3%;
+            height: 175px;
+            margin: 14px 0px 15px -19px;
+        }
+
+        .smer button:hover {
+            transition: 0.3s;
+            background-color: rgb(172, 53, 53);
+
+        }
+
+        .smer button {
+            padding: 6px 12px 6px 12px;
+            background-color: #25274E;
+            color: white;
+            font-family: Quantico;
+            border-radius: 5px;
+        }
+
+        .smer1 img {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .smer1 button:hover {
+            transition: 0.3s;
+            background-color: rgb(172, 53, 53);
+
+        }
+
+        .smer1 button {
+            padding: 6px 12px 6px 12px;
+            background-color: #25274E;
+            color: white;
+            font-family: Quantico;
+            border-radius: 5px;
+        }
+
+        #logo img {
+            height: 28px;
+        }
+
+        nav {}
+
+        nav ul {
+            align-self: flex-end;
+            display: flex;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+
+
+        nav a {
+            padding-left: 12px;
+            padding-right: 12px;
+			margin-top:-3px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+			height:48px;
+            align-items: center;
+            font-weight: 500;
+            font-family: quantico;
+			border-radius:1px;
+            font-size: 17px;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-decoration-color: none;
+            user-select: none;
+        }
+		.btn btn-primary{
+		font-family:
+		}
+
+        nav a:hover {
+            color: black;
+            background-color: white;
+            font-weight: 500;
+			text-decoration: none;
+            transition: 0.3s;
+
+        }
+	
+
+        #smerovi {
+            width: 1115px;
+            margin: 0px auto 0px auto;
+            height: 540px;
+            background: rgb(233, 233, 233);
+            display: flex;
+            flex-direction: row;
+        }
+
+        #smerovi1 {
+            width: 1070px;
+            margin: 0px auto 0px auto;
+            height: 540px;
+            background: rgb(233, 233, 233);
+            display: flex;
+            flex-direction: row;
+        }
+
+        #thumbnail {
+            background: url(bg3.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #thumbnail1 {
+            background: url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        #smer {}
+
+        #smer p {
+            width: 100%;
+            color: white;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 23px;
+        }
+
+        .studije {
+
+            font-family: roboto;
+            border-radius: 2px;
+            font-size: 15px;
+            background-color: white;
+            color: black;
+            padding: 5px 9px 5px 9px;
+            font-weight: 500;
+            line-height: 50px;
+        }
+
+        .studije1 {
+              font-family: roboto;
+            border-radius: 2px;
+            font-size: 15px;
+            background-color: #25274E;
+            color: white;
+            padding: 5px 9px 5px 9px;
+            font-weight: 400;
+        }
+
+        #gradient {
+            box-sizing: border-box;
+            padding: 20px 40px 20px 40px;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 4));
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        #gradient h2 {
+            margin: 0;
+            font-size:3.3em;
+            color: white;
+            line-height: 75px;
+			margin-top:-10px;
+            font-family: Quantico;
+            font-weight: 700;
+        }
+		b{
+		    font-family: Quantico;
+    font-size: 1.55rem;
+	line-height:-5px;
+	}
+
+        #popup {
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        #projects {
+            width: 1120px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(244, 244, 244);
+        }
+
+        #projects1 {
+            width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(244, 244, 244);
+        }
+
+        #lista {
+            display: flex;
+            width: 370px;
+            box-sizing: border-box;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+        }
+
+        #lista hr {
+            margin-bottom: 5px;
+            border: 0;
+            height: 3px;
+            background-color: white;
+        }
+
+        #gradient hr {
+            height: 2px;
+            background-color: white;
+            border: 0;
+			margin-top:3px;
+			margin-bottom:10px;
+        }
+
+        #sidebar {
+            display: flex;
+            width: 370px;
+            box-sizing: border-box;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        #naslov {
+            width: 370px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0px 10px 0px;
+            color: black;
+            border-bottom: 1px solid rgb(158, 158, 158);
+            font-size: 30PX;
+            line-height: 42px;
+            font-family: Quantico;
+            font-weight: 700;
+        }
+
+        #opis {
+            color: white;
+            font-size: 25PX;
+            line-height: 45px;
+            text-transform: lowercase;
+            font-family: Roboto;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .smer {
+            background-color: rgb(255, 255, 255);
+            border-top: 4px solid #25274E;
+            padding: 19px 17px 13px 19px;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 0px 0px 33px -23px rgba(0, 0, 0, 1);
+        }
+
+        .smer1 {
+            background-color: rgb(255, 255, 255);
+            border-top: 4px solid #25274E;
+            padding: 0px 22px 20px 0px;
+            border-radius: 0px 0px 5px 5px;
+            width: 100%;
+            box-shadow: 0px 0px 33px -23px rgba(0, 0, 0, 1);
+        }
+
+        .imesmera {}
+
+        #lista::-webkit-scrollbar-track {
+            border: 0px solid #000;
+            padding: 1px 0;
+            background-color: rgb(241, 241, 241);
+        }
+
+        #lista::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        #lista::-webkit-scrollbar-thumb {
+            border-radius: 0px;
+            box-shadow: inset 0 0 0px rgba(0, 0, 0, .3);
+            background-color: #737272;
+        }
+
+        #title {
+            margin-top: 25px;
+            grid-column: 1/4;
+        }
+
+        #title h3 {
+            display: block;
+            text-align: left;
+            font-size: 2.2rem;
+            padding: 0;
+            line-height: 35px;
+            display: block;
+            color: rgb(29, 29, 29);
+            border-left: 5px solid rgb(39, 43, 114);
+            padding-left: 17px;
+            letter-spacing: -1px;
+            font-family: Quantico;
+            font-weight: 600;
+            margin: -25px 0px 9px 0px;
+        }
+
+        #title2 {
+            text-align: left;
+            font-size: 20px;
+            display: inline;
+            color: rgb(29, 29, 29);
+            line-height: 25px;
+            font-family: Roboto;
+            font-weight: 400;
+            ;
+        }
+
+        #grid {
+            display: grid;
+            grid-gap: 20px;
+            grid-auto-columns: repeat(3, 300px);
+            grid-auto-rows: repeat(3, 300px)auto-fill;
+        }
+
+        #grid1 {
+            display: grid;
+            grid-gap: 30px;
+            width: 1035px;
+            grid-auto-columns: repeat(3, 300px);
+            grid-auto-rows: repeat(3, 300px)auto-fill;
+        }
+
+        #jos {
+            grid-template-rows: 2/3;
+            width: 100%;
+            margin: auto;
+            font-family: Quantico;
+            font-size: 25px;
+            background-color: #25274E;
+            color: white;
+            margin-top: 20PX;
+            margin-bottom: 40px;
+        }
+		#alo{
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		}
+
+        .html {
+            display: none;
+            color: rgb(194, 55, 55);
+             !important
+        }
+
+        .desc:hover .html {
+            display: inline;
+        }
+
+        .zoom {}
+
+        .zoom:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
+        .rotate {
+            box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .rotate:hover {
+            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        #container {
+            grid-row: 4/5;
+            grid-column: 1/4;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            padding: 7px 15px 7px 15px;
+            margin: 0;
+            color: white;
+            font-family: Raleway;
+            background-color: #222224;
+            font-style: bold;
+            font-size: 17px;
+            border: 0px;
+        }
+
+        #footer {
+            height: 710px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #303841;
+            margin-top: 30px;
+        }
+
+        #footer h1 {
+            font-size: 45px;
+            color: white;
+            font-family: Raleway;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+
+        #footer p {
+            font-size: 15px;
+            color: white;
+            font-family: Raleway;
+            font-style: italic;
+        }
+
+        .language {
+            color: black;
+            margin-left: 15px;
+            border-radius: 8px;
+        }
+
+        .language img {
+            height: 24px;
+            margin-right: 5px;
+			margin-top:-6px;
+            border-radius: 4px;
+            border: 2px solid rgba(255, 255, 255, 0);
+        }
+
+        .language img:hover {
+            border: 2px solid white;
+            transition: 0.4s;
+            transform: scale(1.2)
+        }
+
+        .language:hover {
+            cursor: pointer;
+        }
+        }
+
+        button :focus {
+            outline: none;
+             !important
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div id="logo">
+            <img src="logo7.png">
+        </div>
+        <div id="search">
+            <img src="search.png" id="sb">
+            <input id="search" type="text" placeholder="Pretraga">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Pocetna</a></li>
+                <li><a href="#work" title="*Samo za gimnazije i tehničke">Studije</a></li>
+                <li><a href="#contact">Upis</a></li>
+                <li><a href="#work">Aktivnosti</a></li>
+                <li><a href="#contact">Studenti</a></li>
+                <li><a href="#contact">Vesti</a></li>
+                <li><a href="#contact">O nama</a></li>
+                <li><a href="#contact">Ostalo</a></li>
+            </ul>
+        </nav>
+        <div class="language"><img src="srb.png" alt="Srpski(Latinica)"><img src="eng.png" alt="Engleski"></img></div>
+    </div>
+    <div id="smerovi">
+        <div id="thumbnail">
+            <div id="gradient">
+                <div id="smer">
+                    <span class="studije">MASTER STUDIJE</span>
+                    <h2>SOFTVERSKO INZENJERSTVO</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+					<div id="alo"><p><b>Broj studenata: 25 | Trajanje: 4 godine (240 ESPB)</b></p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">OPSIRNIJE</button></div>
+				</div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div id="projects">
+        <div id="grid1">
+            <div id="grid">
+                <div id="title">
+                    <span class="studije1">
+                        STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        OSNOVNE AKADEMSKE STUDIJE
+                        
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        MASTER STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKE NAUKE
+                        <img src="bg.jpg">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#myModal">OPSIRNIJE</button>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Računarske Nauke</h4> <button type="button"
+                                            class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Authoritatively develop alternative niche markets with adaptive action items.
+                                            Credibly negotiate collaborative growth strategies via intermandated
+                                            results. Appropriately benchmark backend e-markets without process-centric
+                                            methods of.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        AKADEMSKE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKI DIZAJN
+                        <img src="bg2.jpg">
+
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        INFORMACIONE TEHNOLOGIJE
+                        <img src="bg3.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        SOFTVERSKO INZENJERSTVO
+                        <img src="bg4.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKO INZENJERSTVO
+                        <img src="bg5.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        INFORMACIONI SISTEMI
+                        <img src="bg6.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+	<div id="smerovi">
+        <div id="thumbnail">
+            <div id="gradient">
+                <div id="smer">
+                    <span class="studije">OBAVEŠTENJE</span>
+                    <h2>JUNSKI ISPITNI ROK</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					<div id="alo"><p><b>Datum objavljivanja: 25.06.2020.</b></p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">OPSIRNIJE</button></div>
+				</div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div id="projects">
+        <div id="grid1">
+            <div id="grid">
+                <div id="title">
+                    <span class="studije1">
+                        NAJNOVIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        NAJNOVIJE NOVOSTI
+                        
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        MASTER STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKE NAUKE
+                        <img src="bg.jpg">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#myModal">OPSIRNIJE</button>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Računarske Nauke</h4> <button type="button"
+                                            class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Authoritatively develop alternative niche markets with adaptive action items.
+                                            Credibly negotiate collaborative growth strategies via intermandated
+                                            results. Appropriately benchmark backend e-markets without process-centric
+                                            methods of.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        AKADEMSKE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKI DIZAJN
+                        <img src="bg2.jpg">
+
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        INFORMACIONE TEHNOLOGIJE
+                        <img src="bg3.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        SOFTVERSKO INZENJERSTVO
+                        <img src="bg4.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        RACUNARSKO INZENJERSTVO
+                        <img src="bg5.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div class="smer">
+                    <span class="studije1">
+                        STRUKOVNE STUDIJE
+                    </span>
+                    <br>
+                    <br>
+                    <div class="imesmera">
+                        INFORMACIONI SISTEMI
+                        <img src="bg6.jpg">
+                        <button>OPSIRNIJE</button>
+                    </div>
+                </div>
+                <div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+</html>
