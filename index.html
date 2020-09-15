@@ -14,7 +14,7 @@
         body {
             overflow-x: auto;
             padding: 0px;
-            background: white;
+            background: hsl(0, 0%, 96%);
             border: 0;
         }
 
@@ -25,8 +25,8 @@
 		.btn-primary{
 		background-color:#AC3535;
 		font-family:Quantico;
-		display: flex;
 		border:0;
+		padding: 0px 12px;
 		}
 		.btn-primary:hover{
 		background-color:#25274E;
@@ -47,19 +47,26 @@
             display: flex;
             flex-direction: row;
             background: #25274E;
-            height: 46px;
+            height: 49px;
             justify-content: center;
             align-items: center;
         }
 
-        .imesmera {
+        .imesmerainaslov {
             line-height: 29px;
             margin-top: -10px;
             font-size: 2em;
             color: black;
             font-family: Quantico;
             font-weight: 600;
+            /* box-shadow: 0 0 0px black; */
+            color: black;
         }
+
+.imesmera {
+}
+
+.imesmera {}
 
         #logo {
             height: 98%;
@@ -76,11 +83,12 @@
         input {
             margin: -3px 14px 0 0px;
             border: 0;
-            font-family: Roboto;
-			letter-spacing:0.8px;
+            font-family: qUANTICO;
+            letter-spacing:0.8px;
             font-size: 16px;
-            border-radius: 26px;
-            padding-left: 13px;
+            /* COLOR: #ea0707; */
+            border-radius: 2px;
+            padding-left: 10px;
             height: 30px;
             width: 370px;
         }
@@ -89,7 +97,7 @@
             position: relative;
             height: 18px;
             top: -2px;
-            left: 362px;
+            left: 366px;
         }
 
         input:focus {
@@ -231,6 +239,7 @@
             background-position: center;
             width: 100%;
             height: 100%;
+            box-shadow: 0px 7px 20px 2px #00000036;
         }
 
         #thumbnail1 {
@@ -246,6 +255,8 @@
         #smer p {
             width: 100%;
             color: white;
+			margin-top:8px;
+			margin-bottom:8px;
             font-family: Roboto;
             font-size: 20px;
             font-weight: 300;
@@ -411,7 +422,13 @@
             box-shadow: 0px 0px 33px -23px rgba(0, 0, 0, 1);
         }
 
-        .imesmera {}
+        .imesmera {
+		font-size:32px;
+		line-height:30px;
+		font-weight:600;
+		font-family:Quantico;
+		margin-top:-10px;
+		}
 
         #lista::-webkit-scrollbar-track {
             border: 0px solid #000;
@@ -469,11 +486,9 @@
         }
 
         #grid1 {
-            display: grid;
-            grid-gap: 30px;
-            width: 1035px;
-            grid-auto-columns: repeat(3, 300px);
-            grid-auto-rows: repeat(3, 300px)auto-fill;
+		display: grid;
+        grid-gap: 20px;
+        grid-auto-columns: repeat(2, 450px);
         }
 
         #jos {
@@ -635,7 +650,6 @@
 
     </div>
     <div id="projects">
-        <div id="grid1">
             <div id="grid">
                 <div id="title">
                     <span class="studije1">
@@ -772,8 +786,7 @@
 
     </div>
     <div id="projects">
-        <div id="grid1">
-            <div id="grid">
+            <div id="grid1">
                 <div id="title">
                     <span class="studije1">
                         NAJNOVIJE
@@ -889,11 +902,10 @@
                     <div></div>
                 </div>
             </div>
-
+		 <br><br><br><br>
         </div>
 
     </div>
-
 </body>
 
 
